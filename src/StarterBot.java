@@ -109,7 +109,7 @@ public class StarterBot {
 						knownWeaps.addKnown(val, true);
 					else
 						knownRooms.addKnown(val, true);
-				}else{
+				} else {
 					int type = Integer.parseInt(data[2]);
 					int val = Integer.parseInt(data[3]);
 					if(type == 0)
@@ -174,6 +174,11 @@ public class StarterBot {
 				int id = Integer.parseInt(data[1]);
 				scan.close();
 				return id == this.id;
+			} else if(data[0].equals("Accusation")) {
+				int p = Integer.parseInt(data[2]);
+				int w = Integer.parseInt(data[3]);
+				int r = Integer.parseInt(data[4]);
+				// TODO THIS IS WHERE YOU MAKE YOUR BOT DETERMINE WHAT TO DO WHEN A FALSE ACCUSATION IS MADE
 			}
 		}
 		scan.close();
